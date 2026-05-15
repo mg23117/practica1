@@ -1,0 +1,9 @@
+<resources>
+    <string name="register_title">Registrarse</string>
+    <string name="login_title">Ingresar</string>
+    <string name="close_app_title">Salir</string>
+    <string name="auth_lb_username">Usuario</string>
+    <string name="auth_et_username">Ingrese su usuario</string>
+    <string name="auth_lb_password">Contraseña</string>
+    <string name="auth_et_password">Ingrese su contraseña</string>
+</resources>
