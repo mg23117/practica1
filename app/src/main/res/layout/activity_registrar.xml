@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Nombre -->
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="Nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_register" />
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Ingresa tu nombre"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_name"
+        app:layout_constraintTop_toTopOf="@id/label_name" />
+
+    <!-- Usuario -->
+    <TextView
+        android:id="@+id/label_register_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Usuario"
+        app:layout_constraintStart_toStartOf="@id/label_name"
+        app:layout_constraintTop_toBottomOf="@id/label_name" />
+
+    <EditText
+        android:id="@+id/edit_text_register_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Ingresa tu usuario"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@id/edit_text_name"
+        app:layout_constraintStart_toStartOf="@id/edit_text_name"
+        app:layout_constraintTop_toTopOf="@id/label_register_username" />
+
+    <!-- Contraseña -->
+    <TextView
+        android:id="@+id/label_register_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Contraseña"
+        app:layout_constraintStart_toStartOf="@id/label_register_username"
+        app:layout_constraintTop_toBottomOf="@id/label_register_username" />
+
+    <EditText
+        android:id="@+id/edit_text_register_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Ingresa tu contraseña"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@id/edit_text_register_username"
+        app:layout_constraintStart_toStartOf="@id/edit_text_register_username"
+        app:layout_constraintTop_toTopOf="@id/label_register_password" />
+
+    <!-- Confirmar Contraseña-->
+    <TextView
+        android:id="@+id/label_register_confirm_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Confirmar contraseña"
+        app:layout_constraintStart_toStartOf="@id/label_register_password"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_register_password" />
+
+    <EditText
+        android:id="@+id/edit_text_register_confirm_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Repite tu contraseña"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@id/edit_text_register_password"
+        app:layout_constraintStart_toStartOf="@id/edit_text_register_password"
+        app:layout_constraintTop_toBottomOf="@id/label_register_confirm_password" />
+
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/label_register_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Correo electrónico"
+        app:layout_constraintStart_toStartOf="@id/label_register_password"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_register_confirm_password" />
+
+    <EditText
+        android:id="@+id/edit_text_register_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Ingresa tu correo"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@id/edit_text_register_password"
+        app:layout_constraintStart_toStartOf="@id/edit_text_register_password"
+        app:layout_constraintTop_toTopOf="@id/label_register_email" />
+
+    <!-- Botón Registrar -->
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Registrar"
+        app:layout_constraintStart_toStartOf="@id/edit_text_register_email"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_register_email" />
+
+    <!-- Botón Cancelar -->
+    <Button
+        android:id="@+id/button_cancel_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Cancelar"
+        app:layout_constraintEnd_toEndOf="@id/edit_text_register_email"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_register_email" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

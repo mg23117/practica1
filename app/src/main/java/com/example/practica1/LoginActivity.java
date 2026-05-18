@@ -7,6 +7,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
 
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -49,9 +50,8 @@ public class LoginActivity extends AppCompatActivity {
         int itemId = menuItem.getItemId();
 
         if(itemId == R.id.menu_register){
-            // Descomentarlo cuando la persona 2 haga lo de la siguiente actividad que había que crear
-            //Intent intent = new Intent(this, RegistrarActivity.class); // Importar también la clase cuando creen esta clase
-            //startActivity(intent);
+            Intent intent = new Intent(this, RegistrarActivity.class);
+            startActivity(intent);
             return true;
         }
 
