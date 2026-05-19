@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="register_nombre">Nombre</string>
+    <string name="register_hint_name">Ingresa tu nombre</string>
+    <string name="register_user">Usuario</string>
+    <string name="register_hint_user">Ingresa tu usuario</string>
+    <string name="register_password">Contraseña</string>
+    <string name="register_hint_password">Ingresa tu contraseña</string>
+    <string name="register_confirmPassword">Confirmar contraseña</string>
+    <string name="register_hint_cPassword">Repite tu contraseña</string>
+    <string name="register_email">Correo electrónico</string>
+    <string name="register_hint_email">Ingresa tu correo</string>
+
+    <string name="saveBtn">Guardar</string>
+    <string name="backBtn">Regresar</string>
+</resources>

@@ -29,6 +29,7 @@ public class RegistrarActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar_register);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Nuevo usuario");
 
         editTextName = findViewById(R.id.edit_text_name);
         editTextUsername = findViewById(R.id.edit_text_register_username);
@@ -39,11 +40,16 @@ public class RegistrarActivity extends AppCompatActivity {
         buttonCancel = findViewById(R.id.button_cancel_register);
 
         buttonRegister.setOnClickListener(v -> {
-            String name = editTextName.getText().toString();
-            String username = editTextUsername.getText().toString();
-            String password = editTextPassword.getText().toString();
+            String name = editTextName.getText().toString().trim();
+            String username = editTextUsername.getText().toString().trim();
+            String password = editTextPassword.getText().toString().trim();
             String confirmPassword = editTextConfirmPassword.getText().toString().trim();
             String email = editTextEmail.getText().toString().trim();
+
+            if (name.isEmpty() || username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || email.isEmpty()) {
+                Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
             // Validación Usuario
             if (username.length() < 3) {
@@ -68,12 +74,7 @@ public class RegistrarActivity extends AppCompatActivity {
                 Toast.makeText(this, "Formato de correo inválido", Toast.LENGTH_SHORT).show();
                 return;
             }
-            if (name.isEmpty() || username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show();
-            } else {
 
-                Toast.makeText(this, "Usuario registrado correctamente", Toast.LENGTH_SHORT).show();
-            }
                 // Guardar en SharedPreferences
                 SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
@@ -91,18 +92,13 @@ public class RegistrarActivity extends AppCompatActivity {
                 editTextPassword.setText("");
                 editTextConfirmPassword.setText("");
                 editTextEmail.setText("");
+        });
 
-            buttonCancel.setOnClickListener(new android.view.View.OnClickListener() {
-                @Override
-                public void onClick(android.view.View v) {
-                    // Cierra la actividad y regresa al LoginActivity
-                    Intent intent = new Intent(RegistrarActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            });
-
-
+        buttonCancel.setOnClickListener(new android.view.View.OnClickListener() {
+            @Override
+            public void onClick(android.view.View v) {
+                finish();
+            }
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.register_main), (v, insets) -> {
