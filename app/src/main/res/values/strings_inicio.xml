@@ -1,0 +1,5 @@
+<resources>
+    <string name="titulo_inicio">"¡Bienvenido a mi tienda!"</string>
+    <string name="titulo_productos">"Listado de productos"</string>
+    <string name="titulo_profile">"Perfil de usuario"</string>
+</resources>
