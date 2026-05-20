@@ -1,0 +1,5 @@
+<resources>
+    <string name="bottom_home">Inicio</string>
+    <string name="bottom_producto">Producto</string>
+    <string name="bottom_perfil">Perfil</string>
+</resources>

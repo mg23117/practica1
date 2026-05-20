@@ -101,8 +101,8 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Inicio de sesión correcto", Toast.LENGTH_LONG).show();
 
             //Ir a HomeActivity
-            //Intent intent = new Intent(this, HomeActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
         } else {
             Toast.makeText(this, "Error de usuario y contraseña inválidos", Toast.LENGTH_SHORT).show();
         }
